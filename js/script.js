@@ -37,6 +37,13 @@ createApp({
         }
     },
     methods: {
+
+        removeItem(index){
+           this.list.splice(index , 1)
+        },
+        checkItem(index){
+            this.list[index].done = true
+        },
         addItem(){
             let object ={
                 text : this.newItem,
@@ -45,14 +52,6 @@ createApp({
             this.list.push(object)
            this.newItem = " "
 
-        },
-        removeItem(index){
-           this.list.splice(index , 1)
-        },
-        checkItem(index){
-            this.list[index].done = true
         }
-
-        
     },
 }).mount("#app")
