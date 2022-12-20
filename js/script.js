@@ -8,7 +8,7 @@ createApp({
             list : [
                 {
                    text: "comprare il latte",
-                   done : false
+                   done : done
 
                 },
                 {
