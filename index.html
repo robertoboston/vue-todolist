@@ -26,8 +26,8 @@
             </li> 
         </ul>
         <div class="input-space">
-            <input class="input-new-item" v-model="newItem" type="text" name="" id="">
-            <button class="btn-input" @click="addItem">Aggiungi</button>
+            <input class="input-new-item" @keyup.enter="addItem()" v-model="newItem" type="text" name="" id="">
+            <button class="btn-input" @click="addItem()">Aggiungi</button>
         </div>
         
     </div>
