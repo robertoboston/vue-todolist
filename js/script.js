@@ -5,6 +5,7 @@ const {
 createApp({
     data(){
         return {
+            newItem : " ",
             list : [
                 {
                    text: "comprare il latte",
@@ -36,6 +37,21 @@ createApp({
         }
     },
     methods: {
+        addItem(){
+            let object ={
+                text : this.newItem,
+                done : false
+            }
+            this.list.push(object)
+           this.newItem = " "
+
+        },
+        removeItem(index){
+           this.list.splice(index , 1)
+        },
+        checkItem(index){
+            this.list[index].done = true
+        }
 
         
     },

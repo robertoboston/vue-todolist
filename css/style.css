@@ -5,7 +5,7 @@
 }
 
 .container{
-    width: 50%;
+    width: 900px;
     margin: 0 auto;
     padding: 100px;
 }
@@ -19,13 +19,57 @@
     padding: 40px;
     font-size: 20px;
     list-style: none;
+    width: 700px;
 
 }
 
 .title{
     text-align: center;
+    margin-top: 10px;
 }
 
 .line-through{
     text-decoration: line-through;
+}
+
+.list-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-check, .btn-remove{
+    border-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    margin: 10px;
+}
+
+.btn-check{
+    color: green;
+}
+
+.btn-remove{
+    color: red;
+}
+
+.input-new-item{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.input-space{
+    display: flex;
+    
+}
+
+.btn-input{
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: greenyellow;
 }

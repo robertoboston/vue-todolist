@@ -6,14 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <div id="app">
+    <h1 class="title">TODOLIST</h1>
     <div class="container">
-        <h1 class="title">TODOLIST</h1>
         <ul class="unstyled-list">
-            <li v-for="(item, index) in list" :class="(item.done === true) ? 'line-through' : '' ">{{index +1}} - {{item.text}}</li>
+            <li v-for="(item, index) in list" :class="(item.done === true) ? 'line-through' : '' ">
+            <div class="list-container">
+                <div>
+                    {{index +1}} - {{item.text}}
+                </div>
+                <div>
+                   <button class="btn-check" @click="checkItem(index)"><i class="fa-solid fa-check"></i></button>
+                   <button class="btn-remove" @click="removeItem(index)"><i class="fa-solid fa-x"></i></button> 
+                </div>
+            </div>
+            </li> 
         </ul>
+        <div class="input-space">
+            <input class="input-new-item" v-model="newItem" type="text" name="" id="">
+            <button class="btn-input" @click="addItem">Aggiungi</button>
+        </div>
+        
     </div>
 </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
