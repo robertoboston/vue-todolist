@@ -42,7 +42,16 @@ createApp({
            this.list.splice(index , 1)
         },
         checkItem(index){
-            this.list[index].done = true
+
+            let check = this.list[index]
+
+            if(check.done == false){
+                check.done = true
+            }
+            else{
+                check.done = false
+            }
+
         },
         addItem(){
             let object ={
