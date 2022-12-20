@@ -9,9 +9,12 @@
 </head>
 <body>
 <div id="app">
-    <ul class="unstyled-list">
-        <li v-for="(item, index) in list" :class="(item.done === true) ? 'line-through' : '' ">{{index +1}} - {{item.text}}</li>
-    </ul>
+    <div class="container">
+        <h1 class="title">TODOLIST</h1>
+        <ul class="unstyled-list">
+            <li v-for="(item, index) in list" :class="(item.done === true) ? 'line-through' : '' ">{{index +1}} - {{item.text}}</li>
+        </ul>
+    </div>
 </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script text="type/javascript" src="./js/script.js"></script>
